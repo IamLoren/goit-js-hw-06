@@ -7,6 +7,18 @@
     <title>Task 8</title>
     <link rel="stylesheet" href="css/common.css" />
     <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      p {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
       .login-form {
         max-width: 320px;
         display: flex;
@@ -23,6 +35,21 @@
         padding: 4px;
         font: inherit;
       }
+
+      .error-message {
+        position: absolute;
+        left: 65%;
+        color: red;
+        font-weight: 600;
+      }
+      .error-message-email {
+        top: 46%;
+      }
+
+      .error-message-password {
+        top: 52%;
+      }
+
     </style>
   </head>
   <body>

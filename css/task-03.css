@@ -1,0 +1,195 @@
+body {
+  background-color: #000;
+}
+.goBack-btn {
+    color: white;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 150px;
+    position: absolute;
+    top: 800px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  
+  .slide-btn {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+  
+  .slide-btn:nth-child(2n) {
+    transform: rotate(45deg) scale(1.5);
+    background-color: aquamarine;
+  }
+  
+  .slide-btn:hover {
+    background-color: aquamarine;
+  }
+  
+  .btn-animation {
+    animation: btn-scale 1s;
+    transition-timing-function: ease-out;
+  }
+  
+  @keyframes btn-scale {
+    0% {
+      transform: rotate(45deg) scale(1);
+    }
+  
+    50% {
+      transform: rotate(45deg) scale(1.6);
+    }
+  
+    100% {
+      transform: rotate(45deg) scale(1);
+    }
+  }
+  
+  .gallery-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+  }
+  
+  .gallery-item {
+    transform-style: preserve-3d;
+    border-radius: 15px;
+  }
+  
+  .first {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   transform: translate3d(-120%, 50%, -300px) rotateY(60deg) scale(0.8);
+   filter: grayscale(1);
+   box-shadow: 7px 30px 41px -14px gray;
+   transition: all 1s;
+  }
+  
+  .second {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    filter: grayscale(0);
+    z-index: 3;
+    box-shadow: 0 0 0 0;
+    transition: all 1s;
+  }
+  
+  .rotateRight {
+   animation: rotateRight 1.5s;
+   animation-timing-function: linear;
+  }
+  
+  @keyframes rotateRight {
+    0% {
+      transform: translate3d(-50%, 50%, 0px) rotateY(0deg) scale(1);
+      filter: grayscale(0);
+    }
+  
+    20% {
+      transform: translate3d(-50%, -50%, 0px) rotateY(90deg) scale(1);
+      filter: grayscale(0.3);
+    }
+  
+    65% {
+    transform: translate3d(0px, 0px, 0px) rotateY(-60deg) scale(0.8);
+    filter: grayscale(0.5);
+    z-index: 0;
+    box-shadow: 7px 30px 41px -14px gray;
+    }
+  
+    100% {
+      transform: translate3d(20%, 50%, -300px) rotateY(-60deg) scale(0.8);
+      filter: grayscale(1);
+      z-index: 0;
+      box-shadow: 7px 30px 41px -14px gray;
+    }
+  
+  }
+  
+  .active {
+    animation: active 0.5s;
+  }
+  
+  @keyframes active {
+    0% {
+      transform: translate(-50%, 50%);
+    }
+    20% {
+      transform: translate(-50%, 50%) rotateZ(3deg);
+    }
+  
+    40% {
+      transform: translate(-50%, 50%) rotateZ(-3deg);
+    }
+    60% {
+      transform: translate(-50%, 50%) rotateZ(3deg);
+    }
+    80% {
+      transform: translate(-50%, 50%) rotateZ(-3deg);
+    }
+  
+    100% {
+      transform: translate(-50%, 50%);
+    }
+  }
+  
+  .third {
+    transform: translate3d(20%, 50%, -300px) rotateY(-60deg) scale(0.8);
+    filter: grayscale(1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    box-shadow: 7px 30px 41px -14px gray;
+    transition: all 1s;
+  }
+  
+  .gallery-img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .rotateLeft {
+    animation: rotateLeft 1.5s;
+    animation-timing-function: linear;
+   }
+   
+   @keyframes rotateLeft {
+     0% {
+       transform: translate3d(-50%, 50%, 0px) rotateY(0deg) scale(1);
+       filter: grayscale(0);
+     }
+   
+     20% {
+       transform: translate3d(-50%, -50%, 0px) rotateY(90deg) scale(1);
+       filter: grayscale(0.3);
+     }
+   
+     65% {
+     transform: translate3d(-120%, 50%, -300px) rotateY(60deg) scale(0.8);
+     filter: grayscale(0.5);
+     z-index: 0;
+     box-shadow: 7px 30px 41px -14px gray;
+     }
+   
+     100% {
+      transform: translate3d(-120%, 50%, -300px) rotateY(60deg) scale(0.8);
+       filter: grayscale(1);
+       z-index: 0;
+       box-shadow: 7px 30px 41px -14px gray;
+     }
+   
+   }

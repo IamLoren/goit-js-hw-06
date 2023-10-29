@@ -1,0 +1,39 @@
+body ~ p {
+   position: absolute;
+    top: 20px;
+    left: 20px; 
+}
+form {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+}
+
+.modal,
+.modal2 {
+    width: 500px;
+    height: 500px;
+    border: none;
+    margin: 0 auto;
+    display: none;
+}
+
+.modal-text {
+    font-size: 45px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.modal-img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.facepalm-active {
+    display: block;
+}

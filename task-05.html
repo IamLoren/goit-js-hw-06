@@ -6,13 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 5</title>
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/task-05.css">
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <input type="text" id="name-input" placeholder="Please enter your name" />
-    <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
-
+    <form>
+      <input type="text" id="name-input" placeholder="Please enter your name" autocomplete="off" />
+      <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+    </form>
+    
+    <div class="modal">
+      <p class="modal-text">Ну в тебе й ім'я!</p>
+      <img class="modal-img" src="https://i.kym-cdn.com/entries/icons/original/000/000/554/picard-facepalm.jpg" alt="facepalm">
+    </div>
+    <div class="modal2">
+      <p class="modal-text">З великої пиши!</p>
+      <img class="modal-img" src="https://odessa-life.od.ua/wp-content/uploads/2018/03/n47659_93983-768x432.jpg">
+    </div>
     <script src="js/task-05.js" type="module"></script>
   </body>
 </html>
