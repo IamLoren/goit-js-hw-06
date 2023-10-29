@@ -13,6 +13,14 @@
     />
     <link rel="stylesheet" href="css/common.css" />
     <style>
+      body {
+        margin: 0;
+      }
+
+      .back-link {
+        margin: 0;
+      }
+
       img {
         display: block;
         margin: 0 auto;
@@ -51,7 +59,8 @@
       .widget p {
         margin-top: 0;
         margin-bottom: 16px;
-        font-size: 48px;
+        font-size: 35px;
+        line-height: 1;
       }
 
       .widget span {
@@ -102,8 +111,8 @@
     </style>
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
-    <img class="ball" src="./img/ball.jpg" alt="Magic ball" />
+    <p class="back-link"><a href="index.html">Go back</a></p>
+    <img class="ball" src="./img/ball.jpg" alt="Magic ball" width="800"/>
     <div class="widget">
       <p>Background color: <span class="color">-</span></p>
       <button type="button" class="change-color">
